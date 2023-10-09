@@ -5,7 +5,7 @@ const books = require('../controllers/books');
 
 const router = express.Router();
 
-//if we hit this route: localhost:8080/books/, then call a funtion in the controller folder (books is the url)
+//if we hit this route: localhost:8080/books/, then call a function in the controller folder (books is the url)
 //getting all the books from the collection
 router.get('/', books.getData);
 
