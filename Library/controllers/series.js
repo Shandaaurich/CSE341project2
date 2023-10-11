@@ -27,11 +27,11 @@ const getData1 = async (req, res, next) => {
 const createseries = async (req, res, next) => {
     const seriesschema = {
 
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        series: req.body.series,
+        author: req.body.author,
         email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        number_of_books: req.body.number_of_books,
+        genre: req.body.genre
 
     };
     const result = await mongodb.getDb().db().collection('series').insertOne(seriesschema);
@@ -47,11 +47,11 @@ const editseries = async (req, res, next) => {
     const seriesId = new ObjectId(req.params.id);
     const series = {
 
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        series: req.body.series,
+        author: req.body.author,
         email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        number_of_books: req.body.number_of_books,
+        genre: req.body.genre
 
     };
     const result = await mongodb.getDb().db().collection('series').replaceOne({ _id: seriesId }, series); {

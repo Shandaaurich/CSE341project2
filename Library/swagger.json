@@ -42,19 +42,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "title": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
-                "email": {
+                "date_published": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "page_number": {
                   "example": "any"
                 },
-                "birthday": {
+                "genre": {
+                  "example": "any"
+                },
+                "ISBN": {
+                  "example": "any"
+                },
+                "series": {
                   "example": "any"
                 }
               }
@@ -106,19 +112,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "title": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
-                "email": {
+                "date_published": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "page_number": {
                   "example": "any"
                 },
-                "birthday": {
+                "genre": {
+                  "example": "any"
+                },
+                "ISBN": {
+                  "example": "any"
+                },
+                "series": {
                   "example": "any"
                 }
               }
@@ -175,19 +187,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "series": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "number_of_books": {
                   "example": "any"
                 },
-                "birthday": {
+                "genre": {
                   "example": "any"
                 }
               }
@@ -239,19 +251,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "series": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "number_of_books": {
                   "example": "any"
                 },
-                "birthday": {
+                "genre": {
                   "example": "any"
                 }
               }

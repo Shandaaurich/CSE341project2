@@ -27,11 +27,13 @@ const getData1 = async (req, res, next) => {
 const createbook = async (req, res, next) => {
     const bookSchema = {
 
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        title: req.body.title,
+        author: req.body.author,
+        date_published: req.body.date_published,
+        page_number: req.body.page_number,
+        genre: req.body.genre,
+        ISBN: req.body.ISBN,
+        series: req.body.series
 
     };
     const result = await mongodb.getDb().db().collection('books').insertOne(bookSchema);
@@ -47,11 +49,13 @@ const editbook = async (req, res, next) => {
     const bookId = new ObjectId(req.params.id);
     const book = {
 
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        title: req.body.title,
+        author: req.body.author,
+        date_published: req.body.date_published,
+        page_number: req.body.page_number,
+        genre: req.body.genre,
+        ISBN: req.body.ISBN,
+        series: req.body.series
 
     };
     const result = await mongodb.getDb().db().collection('books').replaceOne({ _id: bookId }, book); {
