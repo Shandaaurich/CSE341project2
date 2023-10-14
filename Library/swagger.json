@@ -32,14 +32,6 @@
             "description": "Internal Server Error"
           }
         }
-      },
-      "post": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
       }
     },
     "/books/{id}": {
@@ -61,38 +53,6 @@
             "description": "Internal Server Error"
           }
         }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
       }
     },
     "/series/": {
@@ -104,14 +64,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
@@ -135,42 +87,11 @@
             "description": "Internal Server Error"
           }
         }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
       }
     }
   },
   "books": {
+    "_id": 1,
     "title": "Title",
     "author": "Author",
     "date_published": 1945,
@@ -180,6 +101,7 @@
     "series": "The Lord of the Rings"
   },
   "series": {
+    "_id": 1,
     "Series": "The Lord of the Rings",
     "Author": "J.R.R. Tolkien",
     "Number_of_Books": 3,

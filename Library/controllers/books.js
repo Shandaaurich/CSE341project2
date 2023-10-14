@@ -16,7 +16,8 @@ exports.getData = (req,res) => {
 
 //get only the collection object with the ObjectId
 exports.getData1 = (req, res) => {
-    Books.find({_id:id})
+    const bookId = req.params._id;
+    Books.find({_id: bookId})
     .then((data) => {res.send(data);})
     .catch((err) => {
         res.status(500).send({

@@ -8,7 +8,7 @@ exports.getData = (req,res) => {
     .then((data) => {res.send(data);})
     .catch((err) => {
         res.status(500).send({
-          message: err.message || 'Some error occurred while retrieving users.'
+          message: err.message || 'Some error occurred while retrieving series.'
         });
       });
 };
@@ -16,11 +16,12 @@ exports.getData = (req,res) => {
 
 //get only the collection object with the ObjectId
 exports.getData1 = (req, res) => {
-    Series.find({_id:id})
+    const seriesId = req.params._id;
+    Series.find({_id: seriesId})
     .then((data) => {res.send(data);})
     .catch((err) => {
         res.status(500).send({
-          message: err.message || 'Some error occurred while retrieving user.'
+          message: err.message || 'Some error occurred while retrieving series.'
         });
       });
 };

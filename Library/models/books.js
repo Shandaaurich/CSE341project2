@@ -2,6 +2,9 @@ module.exports = (mongoose) => {
     const Books = mongoose.model(
       'books',
       mongoose.Schema({
+        _id: { 
+          type: String ,
+        },
         title: {
           type: String
         },
