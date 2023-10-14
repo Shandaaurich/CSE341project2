@@ -8,7 +8,7 @@ const doc = {
   host: 'localhost:8080',
   schemes: ['http'],
   books: {
-    _id: 1,
+    book_id: 1,
     title: 'Title',
     author: 'Author',
     date_published: 1945,
@@ -18,7 +18,7 @@ const doc = {
     series: 'The Lord of the Rings'},
 
   series: {
-    _id: 1,
+    series_id: 1,
     Series: 'The Lord of the Rings',
     Author: 'J.R.R. Tolkien',
     Number_of_Books: 3,

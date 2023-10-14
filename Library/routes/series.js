@@ -10,16 +10,16 @@ const router = express.Router();
 router.get('/', series.getData);
 
 //getting only the series with the specified id
-router.get('/:id', series.getData1);
+router.get('/:series_id', series.getData1);
 
 // //adding a new series
 // router.post('/', series.createseries);
 
 // //edit a series by id
-// router.put('/:id', series.editseries);
+// router.put('/:series_id', series.editseries);
 
 // //delete a series by id
-// router.delete('/:id', series.deleteseries);
+// router.delete('/:series_id', series.deleteseries);
 
 
 module.exports = router;

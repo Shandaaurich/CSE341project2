@@ -34,12 +34,12 @@
         }
       }
     },
-    "/books/{id}": {
+    "/books/{book_id}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "book_id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -68,12 +68,12 @@
         }
       }
     },
-    "/series/{id}": {
+    "/series/{series_id}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "series_id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -91,7 +91,7 @@
     }
   },
   "books": {
-    "_id": 1,
+    "book_id": 1,
     "title": "Title",
     "author": "Author",
     "date_published": 1945,
@@ -101,7 +101,7 @@
     "series": "The Lord of the Rings"
   },
   "series": {
-    "_id": 1,
+    "series_id": 1,
     "Series": "The Lord of the Rings",
     "Author": "J.R.R. Tolkien",
     "Number_of_Books": 3,

@@ -2,8 +2,8 @@ module.exports = (mongoose) => {
   const Series = mongoose.model(
     'series',
     mongoose.Schema({
-      _id: { 
-        type: String, 
+      series_id: { 
+        type: Number, 
       },
       series: {
         type: String
