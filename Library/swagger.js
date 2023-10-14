@@ -2,12 +2,30 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Description',
+    title: 'My Library API',
+    description: 'A collection of personal titles and series in my personal library'
   },
   host: 'localhost:8080',
   schemes: ['http'],
+  books: {
+
+    title: 'Title',
+    author: 'Author',
+    date_published: 1945,
+    page_number: 180,
+    genre: 'Classic',
+    ISBN: 978-0-7432-7356-5,
+    series: 'The Lord of the Rings'},
+
+  series: {
+    Series: 'The Lord of the Rings',
+    Author: 'J.R.R. Tolkien',
+    Number_of_Books: 3,
+    Genre: 'Fantasy'
+  }
+
 };
+
 
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];

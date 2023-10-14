@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "My Library API",
+    "description": "A collection of personal titles and series in my personal library",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
@@ -11,16 +11,6 @@
     "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/books/": {
       "get": {
         "description": "",
@@ -299,5 +289,20 @@
         }
       }
     }
+  },
+  "books": {
+    "title": "Title",
+    "author": "Author",
+    "date_published": 1945,
+    "page_number": 180,
+    "genre": "Classic",
+    "ISBN": -13815,
+    "series": "The Lord of the Rings"
+  },
+  "series": {
+    "Series": "The Lord of the Rings",
+    "Author": "J.R.R. Tolkien",
+    "Number_of_Books": 3,
+    "Genre": "Fantasy"
   }
 }
