@@ -13,7 +13,7 @@ router.get('/', series.getData);
 router.get('/:series_id', series.getData1);
 
 //adding a new series
-router.post('/', series.createseries);
+router.post('/', series.createSeries);
 
 // //edit a series by id
 // router.put('/:series_id', series.editseries);

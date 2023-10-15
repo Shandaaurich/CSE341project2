@@ -20,7 +20,7 @@ module.exports = (mongoose) => {
         genre: {
           type: String
         },
-        ISBN: {
+        isbn: {
           type: String
         },
         series: {

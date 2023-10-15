@@ -12,8 +12,8 @@ router.get('/', books.getData);
 //getting only the book with the specified id
 router.get('/:book_id', books.getData1);
 
-// //adding a new book
-// router.post('/', books.createbook);
+//adding a new book
+router.post('/', books.createBook);
 
 // //edit a book by id
 // router.put('/:book_id', books.editbook);

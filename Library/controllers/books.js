@@ -25,3 +25,17 @@ exports.getData1 = (req, res) => {
         });
       });
 };
+
+//add a book to the collection
+exports.createBook = (req, res) => {
+  const newBook = Books(req.body);
+  newBook.save()
+  .then((data) => {
+    res.status(201).send(data);
+  })
+  .catch((err) => {
+    res.status(500).send({
+      message: err.message || 'Some error occurred while adding book.'
+  });
+});
+};
