@@ -12,8 +12,8 @@ router.get('/', series.getData);
 //getting only the series with the specified id
 router.get('/:series_id', series.getData1);
 
-// //adding a new series
-// router.post('/', series.createseries);
+//adding a new series
+router.post('/', series.createseries);
 
 // //edit a series by id
 // router.put('/:series_id', series.editseries);
