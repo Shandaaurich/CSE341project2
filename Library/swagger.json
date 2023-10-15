@@ -7,9 +7,7 @@
   },
   "host": "localhost:8080",
   "basePath": "/",
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["http"],
   "paths": {
     "/api-docs": {
       "get": {
@@ -69,12 +67,44 @@
     "/series/": {
       "get": {
         "description": "",
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "series_id": {
+                  "example": "any"
+                },
+                "series": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "number_of_books": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -82,6 +112,7 @@
     "/series/{series_id}": {
       "get": {
         "description": "",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "series_id",
@@ -93,9 +124,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
