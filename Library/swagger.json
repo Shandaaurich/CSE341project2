@@ -11,22 +11,55 @@
     "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/books/": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "date_published": {
+                  "example": "any"
+                },
+                "page_number": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "ISBN": {
+                  "example": "any"
+                },
+                "series": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -34,12 +67,80 @@
         }
       }
     },
-    "/books/{book_id}": {
+    "/books/{id}": {
       "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
         "description": "",
         "parameters": [
           {
-            "name": "book_id",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "date_published": {
+                  "example": "any"
+                },
+                "page_number": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "ISBN": {
+                  "example": "any"
+                },
+                "series": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -58,9 +159,46 @@
     "/series/": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "series": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "number_of_books": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -68,12 +206,74 @@
         }
       }
     },
-    "/series/{series_id}": {
+    "/series/{id}": {
       "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
         "description": "",
         "parameters": [
           {
-            "name": "series_id",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "series": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "number_of_books": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -91,7 +291,6 @@
     }
   },
   "books": {
-    "book_id": 1,
     "title": "Title",
     "author": "Author",
     "date_published": 1945,
@@ -101,7 +300,6 @@
     "series": "The Lord of the Rings"
   },
   "series": {
-    "series_id": 1,
     "Series": "The Lord of the Rings",
     "Author": "J.R.R. Tolkien",
     "Number_of_Books": 3,
