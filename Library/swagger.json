@@ -36,8 +36,11 @@
       "post": {
         "description": "",
         "responses": {
-          "default": {
-            "description": ""
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -74,17 +77,6 @@
             "description": "Internal Server Error"
           }
         }
-      },
-      "post": {
-        "description": "",
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
       }
     },
     "/series/{series_id}": {
@@ -116,14 +108,14 @@
     "date_published": 1945,
     "page_number": 180,
     "genre": "Classic",
-    "ISBN": -13815,
+    "isbn": "978-0-7432-7356-5",
     "series": "The Lord of the Rings"
   },
   "series": {
     "series_id": 1,
-    "Series": "The Lord of the Rings",
-    "Author": "J.R.R. Tolkien",
-    "Number_of_Books": 3,
-    "Genre": "Fantasy"
+    "series": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "number_of_Books": 3,
+    "genre": "Fantasy"
   }
 }

@@ -14,15 +14,15 @@ const doc = {
     date_published: 1945,
     page_number: 180,
     genre: 'Classic',
-    ISBN: 978-0-7432-7356-5,
+    isbn: '978-0-7432-7356-5',
     series: 'The Lord of the Rings'},
 
   series: {
     series_id: 1,
-    Series: 'The Lord of the Rings',
-    Author: 'J.R.R. Tolkien',
-    Number_of_Books: 3,
-    Genre: 'Fantasy'
+    series: 'The Lord of the Rings',
+    author: 'J.R.R. Tolkien',
+    number_of_Books: 3,
+    genre: 'Fantasy'
   }
 
 };
