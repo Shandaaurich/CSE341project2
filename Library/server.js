@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const swagger = require('./routes/swagger');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
+const bookValidation = require('./validation');
 
 const cors = require('cors');
 
@@ -28,6 +29,9 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
     next();
 });
+
+//check validation of book ISBN
+// app.post('/books', bookValidation, (req, res) => {
 
 //routes in a separate file to keep the server file lean
 app.use('/', routes);
