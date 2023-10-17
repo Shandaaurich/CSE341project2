@@ -1,0 +1,141 @@
+//localhost
+### Get all books from the collection
+GET http://localhost:8080/books
+
+### Get a book by id
+GET http://localhost:8080/books/652b44924a71e6e5fd2860e5
+
+### Create a new book in the collection
+POST http://localhost:8080/books HTTP/1.1
+Content-Type: application/json
+
+{    
+    "title": "Title",
+    "author": "Author",
+    "date_published": 1945,
+    "page_number": 180,
+    "genre": "Classic",
+    "ISBN": 978-0-7432-7356-5,
+    "series": "The Lord of the Rings"
+
+}
+
+### Update a book in the collection by id
+PUT http://localhost:8080/books/652b67680e48821a2abf50f4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Title",
+    "author": "Author",
+    "date_published": 1945,
+    "page_number": 180,
+    "genre": "Classic",
+    "ISBN": 978-0-7432-7356-5,
+    "series": "The Lord of the Rings"
+}
+
+### Delete a book in the collection by id
+DELETE http://localhost:8080/books/652b67680e48821a2abf50f4 HTTP/1.1
+
+### Get all series from the collection
+GET http://localhost:8080/series
+
+### Get a series by id
+GET http://localhost:8080/series/652b44924a71e6e5fd2860e5
+
+### Create a new series in the collection
+POST http://localhost:8080/series HTTP/1.1
+Content-Type: application/json
+
+{    
+    "title": "Title",
+    "author": "Author",
+    "date_published": 1945,
+    "page_number": 180,
+    "genre": "Classic",
+    "ISBN": 978-0-7432-7356-5,
+    "series": "The Lord of the Rings"
+
+}
+
+### Update a series in the collection by id
+PUT http://localhost:8080/series/652b67680e48821a2abf50f4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Title",
+    "author": "Author",
+    "date_published": 1945,
+    "page_number": 180,
+    "genre": "Classic",
+    "ISBN": 978-0-7432-7356-5,
+    "series": "The Lord of the Rings"
+}
+
+### Delete a series in the collection by id
+DELETE http://localhost:8080/series/652b67680e48821a2abf50f4 HTTP/1.1
+
+
+
+//Production deploy
+### Get all books from the collection
+GET https://shandalibrary.onrender.com/books
+
+###### Get a book by id
+GET https://shandalibrary.onrender.com/books/65185bc068249a4084ffd5c4
+
+### Create a new book in the collection
+POST https://shandalibrary.onrender.com/books/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "series": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "Number_of_Books": 3,
+    "Genre": "Fantasy"
+}
+
+### Update a book in the collection by id
+PUT https://shandalibrary.onrender.com/books/6514a4bbc06a86e0b3c49e19 HTTP/1.1
+Content-Type: application/json
+
+{
+    "series": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "Number_of_Books": 3,
+    "Genre": "Fantasy"
+}
+
+### Delete a book in the collection by id
+DELETE https://shandalibrary.onrender.com/books/6514a4bbc06a86e0b3c49e19 HTTP/1.1
+
+### Get all series from the collection
+GET https://shandalibrary.onrender.com/series
+
+###### Get a series by id
+GET https://shandalibrary.onrender.com/series/65185bc068249a4084ffd5c4
+
+### Create a new series in the collection
+POST https://shandalibrary.onrender.com/series/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "series": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "Number_of_Books": 3,
+    "Genre": "Fantasy"
+}
+
+### Update a series in the collection by id
+PUT https://shandalibrary.onrender.com/series/6514a4bbc06a86e0b3c49e19 HTTP/1.1
+Content-Type: application/json
+
+{
+    "series": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "Number_of_Books": 3,
+    "Genre": "Fantasy"
+}
+
+### Delete a series in the collection by id
+DELETE https://shandalibrary.onrender.com/series/6514a4bbc06a86e0b3c49e19 HTTP/1.1
