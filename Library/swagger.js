@@ -15,13 +15,21 @@ const doc = {
     page_number: 180,
     genre: 'Classic',
     ISBN: 978-0-7432-7356-5,
-    series: 'The Lord of the Rings'},
+    series: 'The Lord of the Rings'
+  },
 
   series: {
     Series: 'The Lord of the Rings',
     Author: 'J.R.R. Tolkien',
     Number_of_Books: 3,
     Genre: 'Fantasy'
+  },
+
+  users: {
+    username: 'username',
+    password: 'password',
+    name: 'name',
+    email: 'email'
   }
 
 };
