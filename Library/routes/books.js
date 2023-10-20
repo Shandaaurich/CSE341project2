@@ -7,7 +7,7 @@ const router = express.Router();
 const cors = require('cors')
 
 //validation for book schema
-const { bookValidation, idValidationRule, validate } = require('../validation');
+// const { bookValidation, idValidationRule, validate } = require('../validation');
 
 const corsOptions = {
     origin: '*'
@@ -18,16 +18,16 @@ const corsOptions = {
 router.get('/', books.getData);
 
 //getting only the book with the specified id
-router.get('/:id', cors(corsOptions), idValidationRule(), bookValidation, books.getData1, validate);
+router.get('/:id', books.getData1);
 
 //adding a new book
-router.post('/', cors(corsOptions), idValidationRule(), bookValidation, books.createbook, validate);
+router.post('/', books.createbook);
 
 //edit a book by id
-router.put('/:id', cors(corsOptions), idValidationRule(), bookValidation, books.editbook, validate);
+router.put('/:id', books.editbook);
 
 //delete a book by id
-router.delete('/:id', cors(corsOptions), idValidationRule(), bookValidation, books.deletebook, validate);
+router.delete('/:id', books.deletebook);
 
 
 module.exports = router;
