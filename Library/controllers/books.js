@@ -24,28 +24,34 @@ const getData1 = async (req, res, next) => {
 };
 
 // //add a book to the collection
+
 const createbook = async (req, res, next) => {
-    const bookSchema = {
+    try {
+        const bookSchema = {
 
-        title: req.body.title,
-        author: req.body.author,
-        date_published: req.body.date_published,
-        page_number: req.body.page_number,
-        genre: req.body.genre,
-        ISBN: req.body.ISBN,
-        series: req.body.series
+            title: req.body.title,
+            author: req.body.author,
+            date_published: req.body.date_published,
+            page_number: req.body.page_number,
+            genre: req.body.genre,
+            ISBN: req.body.ISBN,
+            series: req.body.series
 
-    };
-    const result = await mongodb.getDb().db().collection('books').insertOne(bookSchema);
-    if (result.acknowledged) {
-        res.status(201).json(result);
-    } else {
-        res.status(500).json(result.error || "Did not create the book")
+        };
+        const result = await mongodb.getDb().db().collection('books').insertOne(bookSchema);
+        if (result.acknowledged) {
+            res.status(201).json(result);
+        } else {
+            res.status(500).json(result.error || "Did not create the book")
+        }
+    } catch (err) {
+        res.status(500).json(err);
     }
 
 };
 
 const editbook = async (req, res, next) => {
+    try {
     const bookId = new ObjectId(req.params.id);
     const book = {
 
@@ -65,6 +71,9 @@ const editbook = async (req, res, next) => {
             res.status(500).json(result.error || "Did not update the book")
         }
     };
+} catch (err) {
+    res.status(500).json(err);
+}
 };
 
 const deletebook = async (req, res) => {

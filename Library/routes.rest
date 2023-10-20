@@ -3,7 +3,7 @@
 GET http://localhost:8080/books
 
 ### Get a book by id
-GET http://localhost:8080/books/652b44924a71e6e5fd2860e5
+GET http://localhost:8080/books/652b44924a71e6e5fd2860dd
 
 ### Create a new book in the collection
 POST http://localhost:8080/books HTTP/1.1
