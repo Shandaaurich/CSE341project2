@@ -2,6 +2,7 @@ const express = require('express');
 
 //data from db
 const users = require('../controllers/users');
+const { idValidationRule, userValidation, validate } = require('../validation');
 
 const router = express.Router();
 
@@ -13,13 +14,13 @@ router.get('/', users.getData);
 router.get('/:id', users.getData1);
 
 //adding a new users
-router.post('/', users.createuser);
+router.post('/', userValidation(), validate, users.createuser);
 
 //edit a users by id
-router.put('/:id', users.edituser);
+router.put('/:id', userValidation(), validate, users.edituser);
 
 //delete a users by id
-router.delete('/:id', users.deleteuser);
+router.delete('/:id', idValidationRule(), validate, users.deleteuser);
 
 
 module.exports = router;

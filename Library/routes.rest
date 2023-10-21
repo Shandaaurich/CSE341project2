@@ -3,14 +3,14 @@
 GET http://localhost:8080/books
 
 ### Get a book by id
-GET http://localhost:8080/books/653304c2f74616f908918254
+GET http://localhost:8080/books/652b44924a71e6e5fd2860da
 
 ### Create a new book in the collection
 POST http://localhost:8080/books HTTP/1.1
 Content-Type: application/json
 
 {    
-    "title": "Title",
+    "title": "Return of the King",
     "author": "Author",
     "date_published": 1945,
     "page_number": 180,
@@ -43,7 +43,7 @@ DELETE http://localhost:8080/books/652b67680e48821a2abf50f4 HTTP/1.1
 GET http://localhost:8080/users
 
 ### Get a user by id
-GET http://localhost:8080/users/6532feef33530b0c3a20998e
+GET http://localhost:8080/users/65330f2b74f806e27be7b38c
 
 ### Create a new user in the collection
 POST http://localhost:8080/users HTTP/1.1
@@ -58,7 +58,7 @@ Content-Type: application/json
 }
 
 ### Update a user in the collection by id
-PUT http://localhost:8080/users/6532feef33530b0c3a20998e HTTP/1.1
+PUT http://localhost:8080/users/65330f2b74f806e27be7b38c HTTP/1.1
 Content-Type: application/json
 
 {
@@ -69,7 +69,7 @@ Content-Type: application/json
 }
 
 ### Delete a user in the collection by id
-DELETE http://localhost:8080/users/6532feef33530b0c3a20998e HTTP/1.1
+DELETE http://localhost:8080/users/65330f2b74f806e27be7b38c HTTP/1.1
 
 
 

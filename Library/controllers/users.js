@@ -1,6 +1,7 @@
 //connect to MongoDB
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
+// const passwordCheck = require('../util/passwordCheck');
 
 //get all data from users collection
 const getData = async (req, res, next) => {
