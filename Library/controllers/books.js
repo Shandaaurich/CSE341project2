@@ -15,8 +15,8 @@ const getData = async (req, res, next) => {
 
 //get only the collection object with the ObjectId
 const getData1 = async (req, res, next) => {
-    const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDb().db().collection('books').find({ _id: userId });
+    const bookId = new ObjectId(req.params.id);
+    const result = await mongodb.getDb().db().collection('books').find({ _id: bookId });
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists[0]);

@@ -27,8 +27,6 @@ const getData1 = async (req, res, next) => {
 const createseries = async (req, res, next) => {
     try {
         const seriesschema = {
-
-            series_id: req.body.series_id,
             series: req.body.series,
             author: req.body.author,
             number_of_books: req.body.number_of_books,
@@ -52,7 +50,6 @@ const editseries = async (req, res, next) => {
         const seriesId = new ObjectId(req.params.id);
         const series = {
 
-            series_id: req.body.series_id,
             series: req.body.series,
             author: req.body.author,
             number_of_books: req.body.number_of_books,
