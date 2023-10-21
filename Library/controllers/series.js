@@ -25,42 +25,48 @@ const getData1 = async (req, res, next) => {
 
 // //add a series to the collection
 const createseries = async (req, res, next) => {
-    const seriesschema = {
+    try {
+        const seriesschema = {
+            series: req.body.series,
+            author: req.body.author,
+            number_of_books: req.body.number_of_books,
+            genre: req.body.genre
 
-        series: req.body.series,
-        author: req.body.author,
-        email: req.body.email,
-        number_of_books: req.body.number_of_books,
-        genre: req.body.genre
-
-    };
-    const result = await mongodb.getDb().db().collection('series').insertOne(seriesschema);
-    if (result.acknowledged) {
-        res.status(201).json(result);
-    } else {
-        res.status(500).json(result.error || "Did not create the series")
+        };
+        const result = await mongodb.getDb().db().collection('series').insertOne(seriesschema);
+        if (result.acknowledged) {
+            res.status(201).json(result);
+        } else {
+            res.status(500).json(result.error || "Did not create the series")
+        }
+    } catch (err) {
+        res.status(500).json(err);
     }
 
 };
 
 const editseries = async (req, res, next) => {
-    const seriesId = new ObjectId(req.params.id);
-    const series = {
+    try {
+        const seriesId = new ObjectId(req.params.id);
+        const series = {
 
-        series: req.body.series,
-        author: req.body.author,
-        email: req.body.email,
-        number_of_books: req.body.number_of_books,
-        genre: req.body.genre
+            series: req.body.series,
+            author: req.body.author,
+            number_of_books: req.body.number_of_books,
+            genre: req.body.genre
 
-    };
-    const result = await mongodb.getDb().db().collection('series').replaceOne({ _id: seriesId }, series); {
-        if (result.modifiedCount > 0) {
-            res.status(204).send();
-        } else {
-            res.status(500).json(result.error || "Did not update the series")
-        }
-    };
+        };
+        const result = await mongodb.getDb().db().collection('series').replaceOne({ _id: seriesId }, series); {
+            if (result.modifiedCount > 0) {
+                res.status(204).send();
+            } else {
+                res.status(500).json(result.error || "Did not update the series")
+            }
+        };
+    } catch (err) {
+        res.status(500).json(err);
+    }
+
 };
 
 const deleteseries = async (req, res) => {

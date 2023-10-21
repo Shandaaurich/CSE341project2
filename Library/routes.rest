@@ -3,77 +3,108 @@
 GET http://localhost:8080/books
 
 ### Get a book by id
-GET http://localhost:8080/books/652b44924a71e6e5fd2860e5
+GET http://localhost:8080/books/653404a1f7379c356a33263e
 
 ### Create a new book in the collection
 POST http://localhost:8080/books HTTP/1.1
 Content-Type: application/json
 
 {    
-    "title": "Title",
+    "title": "Return of the King6",
     "author": "Author",
     "date_published": 1945,
     "page_number": 180,
     "genre": "Classic",
-    "ISBN": 978-0-7432-7356-5,
+    "isbn": "978-0-7432-7356-5",
     "series": "The Lord of the Rings"
 
 }
 
 ### Update a book in the collection by id
-PUT http://localhost:8080/books/652b67680e48821a2abf50f4 HTTP/1.1
+PUT http://localhost:8080/books/653304c2f74616f908918254 HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Title",
+    "title": "Title7",
     "author": "Author",
     "date_published": 1945,
     "page_number": 180,
     "genre": "Classic",
-    "ISBN": 978-0-7432-7356-5,
+    "isbn": "978-0-7432-7356-5",
     "series": "The Lord of the Rings"
 }
 
 ### Delete a book in the collection by id
 DELETE http://localhost:8080/books/652b67680e48821a2abf50f4 HTTP/1.1
 
+
+
+### Get all users from the collection
+GET http://localhost:8080/users
+
+### Get a user by id
+GET http://localhost:8080/users/6533f380d8b9d1b79cdf6e67
+
+### Create a new user in the collection
+POST http://localhost:8080/users HTTP/1.1
+Content-Type: application/json
+
+{    
+    "username": "spacelover7",
+    "password": "spaceshuttle34",
+    "name": "Jim Lovell",
+    "email": "jim@nasa.gov"
+
+}
+
+### Update a user in the collection by id
+PUT http://localhost:8080/users/6533f380d8b9d1b79cdf6e67 HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "spacelover6",
+    "password": "spaceshuttle34",
+    "name": "Jim Lovell",
+    "email": "jim@nasa.gov"
+}
+
+### Delete a user in the collection by id
+DELETE http://localhost:8080/users/6533f380d8b9d1b79cdf6e67 HTTP/1.1
+
+
+
+
 ### Get all series from the collection
 GET http://localhost:8080/series
 
 ### Get a series by id
-GET http://localhost:8080/series/652b44924a71e6e5fd2860e5
+GET http://localhost:8080/series/652b44ab4a71e6e5fd286104
 
 ### Create a new series in the collection
 POST http://localhost:8080/series HTTP/1.1
 Content-Type: application/json
 
 {    
-    "title": "Title",
-    "author": "Author",
-    "date_published": 1945,
-    "page_number": 180,
-    "genre": "Classic",
-    "ISBN": 978-0-7432-7356-5,
-    "series": "The Lord of the Rings"
+    "series": "series3",
+    "author": "author",
+    "number_of_books": "3",
+    "genre": "genre"
 
 }
 
 ### Update a series in the collection by id
-PUT http://localhost:8080/series/652b67680e48821a2abf50f4 HTTP/1.1
+PUT http://localhost:8080/series/653305baed1ac78993967bfe HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Title",
-    "author": "Author",
-    "date_published": 1945,
-    "page_number": 180,
-    "genre": "Classic",
-    "ISBN": 978-0-7432-7356-5,
-    "series": "The Lord of the Rings"
+    "series": "series",
+    "author": "author",
+    "number_of_books": 3,
+    "genre": "genre"
 }
 
 ### Delete a series in the collection by id
-DELETE http://localhost:8080/series/652b67680e48821a2abf50f4 HTTP/1.1
+DELETE http://localhost:8080/series/653305baed1ac78993967bfe HTTP/1.1
 
 
 
@@ -89,10 +120,10 @@ POST https://shandalibrary.onrender.com/books/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "series": "The Lord of the Rings",
-    "author": "J.R.R. Tolkien",
-    "Number_of_Books": 3,
-    "Genre": "Fantasy"
+    "series": "series",
+    "author": "author",
+    "number_of_books": 3,
+    "genre": "genre"
 }
 
 ### Update a book in the collection by id
@@ -139,3 +170,5 @@ Content-Type: application/json
 
 ### Delete a series in the collection by id
 DELETE https://shandalibrary.onrender.com/series/6514a4bbc06a86e0b3c49e19 HTTP/1.1
+
+

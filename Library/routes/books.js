@@ -3,6 +3,9 @@ const express = require('express');
 //data from db
 const books = require('../controllers/books');
 
+//validation for book schema
+const { bookValidation, idValidationRule, validate } = require('../validation');
+
 const router = express.Router();
 
 //if we hit this route: localhost:8080/books/, then call a function in the controller folder (books is the url)
@@ -13,13 +16,13 @@ router.get('/', books.getData);
 router.get('/:id', books.getData1);
 
 //adding a new book
-router.post('/', books.createbook);
+router.post('/', bookValidation(), validate, books.createbook);
 
 //edit a book by id
-router.put('/:id', books.editbook);
+router.put('/:id', bookValidation(), validate, books.editbook);
 
 //delete a book by id
-router.delete('/:id', books.deletebook);
+router.delete('/:id', idValidationRule(), validate, books.deletebook);
 
 
 module.exports = router;

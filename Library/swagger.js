@@ -8,20 +8,27 @@ const doc = {
   host: 'localhost:8080',
   schemes: ['http'],
   books: {
-
     title: 'Title',
     author: 'Author',
     date_published: 1945,
     page_number: 180,
     genre: 'Classic',
-    ISBN: 978-0-7432-7356-5,
-    series: 'The Lord of the Rings'},
+    isbn: "978-0-7432-7356-5",
+    series: 'The Lord of the Rings'
+  },
 
   series: {
     Series: 'The Lord of the Rings',
     Author: 'J.R.R. Tolkien',
     Number_of_Books: 3,
     Genre: 'Fantasy'
+  },
+
+  users: {
+    username: 'username',
+    password: 'password',
+    name: 'name',
+    email: 'email'
   }
 
 };
