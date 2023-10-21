@@ -2,6 +2,7 @@ const express = require('express');
 
 //data from db
 const users = require('../controllers/users');
+
 const { idValidationRule, userValidation, validate } = require('../validation');
 
 const router = express.Router();

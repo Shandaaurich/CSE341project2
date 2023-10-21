@@ -7,7 +7,9 @@
   },
   "host": "localhost:8080",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": [
+    "http"
+  ],
   "paths": {
     "/api-docs": {
       "get": {
@@ -22,7 +24,9 @@
     "/books/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -53,7 +57,7 @@
                 "genre": {
                   "example": "any"
                 },
-                "ISBN": {
+                "isbn": {
                   "example": "any"
                 },
                 "series": {
@@ -79,7 +83,9 @@
     "/books/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -91,9 +97,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
           }
         }
       },
@@ -127,7 +130,7 @@
                 "genre": {
                   "example": "any"
                 },
-                "ISBN": {
+                "isbn": {
                   "example": "any"
                 },
                 "series": {
@@ -175,7 +178,9 @@
     "/series/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -191,13 +196,13 @@
             "schema": {
               "type": "object",
               "properties": {
+                "series_id": {
+                  "example": "any"
+                },
                 "series": {
                   "example": "any"
                 },
                 "author": {
-                  "example": "any"
-                },
-                "email": {
                   "example": "any"
                 },
                 "number_of_books": {
@@ -213,6 +218,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"
@@ -223,7 +231,9 @@
     "/series/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -253,13 +263,13 @@
             "schema": {
               "type": "object",
               "properties": {
+                "series_id": {
+                  "example": "any"
+                },
                 "series": {
                   "example": "any"
                 },
                 "author": {
-                  "example": "any"
-                },
-                "email": {
                   "example": "any"
                 },
                 "number_of_books": {
@@ -275,6 +285,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"
@@ -295,6 +308,9 @@
           "200": {
             "description": "OK"
           },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -304,7 +320,9 @@
     "/users/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -340,6 +358,9 @@
           "201": {
             "description": "Created"
           },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -349,7 +370,9 @@
     "/users/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -399,6 +422,9 @@
           "204": {
             "description": "No Content"
           },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -417,6 +443,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"
@@ -431,7 +460,7 @@
     "date_published": 1945,
     "page_number": 180,
     "genre": "Classic",
-    "ISBN": "978-0-7432-7356-5",
+    "isbn": -13815,
     "series": "The Lord of the Rings"
   },
   "series": {

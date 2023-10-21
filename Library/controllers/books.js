@@ -34,7 +34,7 @@ const createbook = async (req, res, next) => {
             date_published: req.body.date_published,
             page_number: req.body.page_number,
             genre: req.body.genre,
-            ISBN: req.body.ISBN,
+            isbn: req.body.isbn,
             series: req.body.series
 
         };
@@ -52,28 +52,28 @@ const createbook = async (req, res, next) => {
 
 const editbook = async (req, res, next) => {
     try {
-    const bookId = new ObjectId(req.params.id);
-    const book = {
+        const bookId = new ObjectId(req.params.id);
+        const book = {
 
-        title: req.body.title,
-        author: req.body.author,
-        date_published: req.body.date_published,
-        page_number: req.body.page_number,
-        genre: req.body.genre,
-        ISBN: req.body.ISBN,
-        series: req.body.series
+            title: req.body.title,
+            author: req.body.author,
+            date_published: req.body.date_published,
+            page_number: req.body.page_number,
+            genre: req.body.genre,
+            isbn: req.body.isbn,
+            series: req.body.series
 
-    };
-    const result = await mongodb.getDb().db().collection('books').replaceOne({ _id: bookId }, book); {
-        if (result.modifiedCount > 0) {
-            res.status(204).send();
-        } else {
-            res.status(500).json(result.error || "Did not update the book")
-        }
-    };
-} catch (err) {
-    res.status(500).json(err);
-}
+        };
+        const result = await mongodb.getDb().db().collection('books').replaceOne({ _id: bookId }, book); {
+            if (result.modifiedCount > 0) {
+                res.status(204).send();
+            } else {
+                res.status(500).json(result.error || "Did not update the book")
+            }
+        };
+    } catch (err) {
+        res.status(500).json(err);
+    }
 };
 
 const deletebook = async (req, res) => {
