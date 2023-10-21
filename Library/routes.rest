@@ -3,7 +3,7 @@
 GET http://localhost:8080/books
 
 ### Get a book by id
-GET http://localhost:8080/books/653404a1f7379c356a33263e
+GET http://localhost:8080/books/653404a1f7379c356a33263
 
 ### Create a new book in the collection
 POST http://localhost:8080/books HTTP/1.1
@@ -12,7 +12,7 @@ Content-Type: application/json
 {    
     "title": "Return of the King6",
     "author": "Author",
-    "date_published": 1945,
+    //"date_published": ,
     "page_number": 180,
     "genre": "Classic",
     "isbn": "978-0-7432-7356-5",
