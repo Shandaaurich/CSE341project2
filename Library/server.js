@@ -3,19 +3,27 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-
 const cors = require('cors');
 
 // const MongoClient = require('mongodb').MongoClient;
 //require the mongoDb file that has the connection to MongoDB
 const mongodb = require('./db/connect');
 const routes = require('./routes');
+const passportSetup = require('./config/passport-setup');
+
 
 const app = express();
 
+//set up view engine
+app.set('view engine', 'ejs');
+
+//create home route
+app.get('/', (req, res) => {
+    res.render('home');
+});
+
 //change the port 8080 to support the production port
 const port = process.env.PORT || 8080;
-
 
 app.use(cors());
 app.use(bodyParser.json());

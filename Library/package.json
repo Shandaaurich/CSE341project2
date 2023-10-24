@@ -19,6 +19,8 @@
     "joi-password-complexity": "^5.2.0",
     "mongodb": "^6.1.0",
     "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
     "swagger": "^0.0.1",
     "swagger-autogen": "^2.23.6",
     "swagger-ui-express": "^5.0.0"
