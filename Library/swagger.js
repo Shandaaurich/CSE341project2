@@ -24,12 +24,12 @@ const doc = {
     Genre: 'Fantasy'
   },
 
-  users: {
-    username: 'username',
-    password: 'password',
-    name: 'name',
-    email: 'email'
-  }
+  // users: {
+  //   username: 'username',
+  //   password: 'password',
+  //   name: 'name',
+  //   email: 'email'
+  // }
 
 };
 

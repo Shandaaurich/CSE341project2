@@ -13,10 +13,12 @@ passport.use(
         passReqToCallback: true
     }, (request, accessToken, refreshToken, profile, done) => {
         //passport callback function
-        UserActivation.findOrCreate({ GoogleID: profile.id }, () => {
-            return done(err, user);
+        // UserActivation.findOrCreate({ GoogleID: profile.id }, () => {
+        //     return done(err, user);
 
-        })
+        // })
+
+        console.log(profile);
     }
 
     ));

@@ -19,14 +19,14 @@ exports.seriesValidation = () => {
   ];
 }
 
-exports.userValidation = () => {
-  return [
-    check('username', 'firstName is required').not().isEmpty(),
-    check('password', 'password is required').not().isEmpty(),
-    check('name', 'name is required').not().isEmpty(),
-    check('email', 'Please include a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true })
-  ];
-}
+// exports.userValidation = () => {
+//   return [
+//     check('username', 'firstName is required').not().isEmpty(),
+//     check('password', 'password is required').not().isEmpty(),
+//     check('name', 'name is required').not().isEmpty(),
+//     check('email', 'Please include a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true })
+//   ];
+// }
 
 exports.idValidationRule = () => {
   return [
