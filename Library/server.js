@@ -8,6 +8,10 @@ const cors = require('cors');
 // const MongoClient = require('mongodb').MongoClient;
 //require the mongoDb file that has the connection to MongoDB
 const mongodb = require('./db/connect');
+//use mongoose to connect to MongoDB
+mongoose = require('mongoose');
+keys = require('./config/keys');
+
 const routes = require('./routes');
 const passportSetup = require('./config/passport-setup');
 
@@ -39,7 +43,11 @@ app.use((req, res, next) => {
 //routes in a separate file to keep the server file lean
 app.use('/', routes);
 
+// connect to mongodb
+mongoose.connect(process.env.MOGOOSEDB_URI)
+
 //connect to MongoDB instance, show error in console or display connected message
+
 mongodb.initDb((err, mongodb) => {
     if (err) {
         console.log(err);
