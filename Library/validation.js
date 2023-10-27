@@ -5,7 +5,7 @@ exports.bookValidation = () => {
     check('title', 'Title is required').not().isEmpty(),
     check('author', 'Author is required').not().isEmpty(),
     check('date_published', 'Date published is required').not().isEmpty(),
-    check('isbn', 'ISBN is not valid').not().isEmpty().isISBN(),
+    check('isbn', 'ISBN is not valid').not().isEmpty(),
     check('series', 'If not part of a series type N/A').not().isEmpty()
   ];
 }
