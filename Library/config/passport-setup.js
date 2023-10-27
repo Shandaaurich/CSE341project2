@@ -12,16 +12,25 @@ passport.use(
         passReqToCallback: true
     }, function (request, accessToken, refreshToken, profile, done) {
 
-        console.log(profile);
+        //check if user already exists in our database
+        User.findOne({ googleId: profile.id }).then((currentUser) => {
+            if (currentUser) {
+                //already have user
+                console.log('user is:' + currentUser);
+            }
+            else {
+                //if not creat user in db
+                new User({
+                    username: profile.displayName,
+                    googleId: profile.id
+                }).save().then((newUser) => {
+                    console.log('User created: ' + newUser);
+                })
 
-        new User({
-            username: profile.displayName,
-            googleId: profile.id
-        }).save().then((newUser) => {
-            console.log('User created: ' + newUser);
-        })
+            }
+        });
+    })
+);
 
 
-    }
 
-    ));
