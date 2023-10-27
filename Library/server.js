@@ -9,12 +9,9 @@ const cors = require('cors');
 //require the mongoDb file that has the connection to MongoDB
 const mongodb = require('./db/connect');
 //use mongoose to connect to MongoDB
-mongoose = require('mongoose');
-keys = require('./config/keys');
+const mongoose = require('mongoose');
 
 const routes = require('./routes');
-const passportSetup = require('./config/passport-setup');
-
 
 const app = express();
 
