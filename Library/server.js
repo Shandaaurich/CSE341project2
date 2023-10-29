@@ -1,15 +1,14 @@
 //express web server
-
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const cors = require('cors');
 
-// const MongoClient = require('mongodb').MongoClient;
 //require the mongoDb file that has the connection to MongoDB
 const mongodb = require('./db/connect');
 //use mongoose to connect to MongoDB
 const mongoose = require('mongoose');
+
+const passport = require('./config/passport-setup');
 
 const routes = require('./routes');
 
@@ -35,7 +34,6 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
     next();
 });
-
 
 //routes in a separate file to keep the server file lean
 app.use('/', routes);
