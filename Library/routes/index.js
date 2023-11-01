@@ -1,14 +1,18 @@
 const routes = require('express').Router();
 
+//dotenv package to access environment file
+const dotenv = require('dotenv');
+dotenv.config();
+
 //Auth0 authentication
 const { auth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: '7f00JPEb4i28uyhIEfraVR3vnB5IE_yF_5x-gAY_w97wZxkCiSA1EIyeXdVCy95S',
+  secret: process.env['AuthSecret'],
   baseURL: 'http://localhost:8080',
-  clientID: '5X1Y6EEDOBiysAU6TcHC3jKlURwT6wAx',
+  clientID: process.env['AuthClientID'],
   issuerBaseURL: 'https://dev-msbr740eu250r17d.us.auth0.com'
 };
 
@@ -20,7 +24,13 @@ routes.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
-routes.use('/auth', require('./auth-routes'));
+const { requiresAuth } = require('express-openid-connect');
+
+routes.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
+
+// routes.use('/auth', require('./auth-routes'));
 routes.use('/', require('./swagger'));
 routes.use('/books', require('./books'));
 routes.use('/series', require('./series'));
