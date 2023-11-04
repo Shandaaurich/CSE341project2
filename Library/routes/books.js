@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/', books.getData);
 
 //getting only the book with the specified id
-router.get('/:id', books.getData1);
+router.get('/:id', idValidationRule(), validate,  books.getData1);
 
 //adding a new book
 router.post('/', bookValidation(), validate, books.createbook);
