@@ -8,6 +8,11 @@ const mongodb = require('./db/connect');
 
 const routes = require('./routes');
 
+//dotenv package to access environment file
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 const app = express();
 
 //set up view engine
